@@ -30,4 +30,6 @@ int main() {
  my_list_of_ints.insert(6,35);
  cout << "Here's the size: " << my_list_of_ints.size()<< endl;
  my_list_of_ints.print_list();
+ cout << "Now here's the list when I remove a node from position 2" << endl;
+ my_list_of_ints.remove(2);
  }
