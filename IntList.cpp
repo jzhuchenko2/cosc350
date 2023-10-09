@@ -129,3 +129,17 @@ void IntList::insert_between_nodes(Node* previous_node, Node* next_node, Node* n
     m_size++;
 
 }
+int IntList::get(int position){
+    if ((position <0) || (position > m_size-1)){
+        throw out_of_range("get called with out of range position");
+    }else{
+        int current_location = 0;
+        Node* current_node = m_head;
+
+        while(current_location< position){
+            current_node = current_node->next;
+            current_location++;
+        }
+        return current_node->value;
+    }
+}
