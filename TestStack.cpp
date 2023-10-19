@@ -8,5 +8,5 @@ int main(){
     Stack<int> stack;
     stack.push(1);
     stack.push(2);
-    //DoublyLinkedList.print_list();
+    DoublyLinkedList.print_list();
 }
