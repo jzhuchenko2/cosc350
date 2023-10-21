@@ -2,6 +2,13 @@
 
 #include "Stack.h"
 
+bool areBracketsBalanced(string expr){
+    Stack<char> backing;
+    for(int i = 0; i < expr.length(); i++) {
+        
+    }
+}
+
 
 int main(){
     Stack<char> stack;
