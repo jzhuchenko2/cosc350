@@ -5,8 +5,13 @@
 
 
 int main(){
-    Stack<int> stack;
-    stack.push(1);
-    stack.push(2);
-    DoublyLinkedList.print_list();
+    Stack<char> stack;
+
+    sring expr = "{()[]";
+    if (areBracketsBalanced(expr)){
+        cout << "Balanced" << endl;
+    } else{
+        cout << "Not Balanced" << endl;
+    }
+    return 0;
 }
