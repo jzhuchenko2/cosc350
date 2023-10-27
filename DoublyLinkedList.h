@@ -311,3 +311,7 @@ T pop_front() {
             m_head->previous = nullptr;
         return frontValue;
     }
+~DoublyLinkedList() {
+        while (!is_empty())
+            pop_front();
+    }};
