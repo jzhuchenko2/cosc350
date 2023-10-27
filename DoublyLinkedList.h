@@ -299,3 +299,15 @@ void push_back(const T& value) {
             m_tail = newNode;
         }
     }
+T pop_front() {
+        if (!m_head)
+            throw std::runtime_error("List is empty");
+
+        T frontValue = m_head->value;
+        Node* temp = m_head;
+        m_head = m_head->next;
+        delete temp;
+        if (m_head)
+            m_head->previous = nullptr;
+        return frontValue;
+    }
