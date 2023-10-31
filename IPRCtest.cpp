@@ -3,6 +3,7 @@
 #include "DoublyLinkedList.h"
 
 int main(){
+  try{
   DoublyLinkedList<int> list;
     // Push some elements into the integer list
     list.append(10);
@@ -25,4 +26,9 @@ int main(){
     my_char_list.print_list();
     
     return 0;
+    catch (const std::exception &exc)
+      {
+          cout << exc.what();
+          return 1;
+      }
 }
