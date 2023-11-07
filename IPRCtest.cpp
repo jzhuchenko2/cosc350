@@ -19,6 +19,9 @@ int main(){
     std::cout << "Element at position 2 in char list: " << my_char_list.get(2) << std::endl;
     
     // Remove an element from the char list
+    my_char_list.set(0, 'r');
+    my_char_list.push_back('z');
+    my_char_list.push_front('x');
     std::cout << "Removed element at position 1 from char list: " << my_char_list.remove(1) << std::endl;
     
     // Print both lists
