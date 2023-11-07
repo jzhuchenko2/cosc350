@@ -22,7 +22,7 @@ int main(){
     my_char_list.set(0, 'r');
     my_char_list.push_back('z');
     my_char_list.push_front('x');
-    std::cout << "Removed element at position 1 from char list: " << my_char_list.remove(1) << std::endl;
+    my_char_list.remove(1);
     
     // Print both lists
     list.print_list();
