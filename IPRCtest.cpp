@@ -2,7 +2,7 @@
 #include <iostream>
 #include "DoublyLinkedList.h"
 
-using namespace stdl
+using namespace std;
 
 int main(){
   try{
