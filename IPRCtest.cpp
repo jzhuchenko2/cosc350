@@ -2,6 +2,8 @@
 #include <iostream>
 #include "DoublyLinkedList.h"
 
+using namespace stdl
+
 int main(){
   try{
   DoublyLinkedList<int> list;
