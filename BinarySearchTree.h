@@ -101,3 +101,36 @@ public:
             std::cout << std::endl;
         }
     }
+private:
+    // Helper functions go here...
+
+    void inorderPrintHelper(const BinarySearchTreeNode *node) const
+    {
+        if (node != nullptr)
+        {
+            inorderPrintHelper(node->left);
+            std::cout << node->value << " ";
+            inorderPrintHelper(node->right);
+        }
+    }
+
+    void preorderPrintHelper(const BinarySearchTreeNode *node) const
+    {
+        if (node != nullptr)
+        {
+            std::cout << node->value << " ";
+            preorderPrintHelper(node->left);
+            preorderPrintHelper(node->right);
+        }
+    }
+
+    void postorderPrintHelper(const BinarySearchTreeNode *node) const
+    {
+        if (node != nullptr)
+        {
+            postorderPrintHelper(node->left);
+            postorderPrintHelper(node->right);
+            std::cout << node->value << " ";
+        }
+    }
+};
