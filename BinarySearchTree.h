@@ -46,3 +46,58 @@ private:
             }
         }
     };
+BinarySearchTreeNode* root;
+public:
+    BinarySearchTree() : root(nullptr) {}
+
+    void insert(const Comparable &x)
+    {
+        if (root == nullptr)
+        {
+            root = new BinarySearchTreeNode(x);
+        }
+        else
+        {
+            root->insert(x);
+        }
+    }
+
+    void inorder_print() const
+    {
+        if (root == nullptr)
+        {
+            std::cout << "Tree is empty." << std::endl;
+        }
+        else
+        {
+            inorderPrintHelper(root);
+            std::cout << std::endl;
+            //std::cout << "whats life" << std::endl;
+        }
+    }
+
+    void preorder_print() const
+    {
+        if (root == nullptr)
+        {
+            std::cout << "Tree is empty." << std::endl;
+        }
+        else
+        {
+            preorderPrintHelper(root);
+            std::cout << std::endl;
+        }
+    }
+
+    void postorder_print() const
+    {
+        if (root == nullptr)
+        {
+            std::cout << "Tree is empty." << std::endl;
+        }
+        else
+        {
+            postorderPrintHelper(root);
+            std::cout << std::endl;
+        }
+    }
