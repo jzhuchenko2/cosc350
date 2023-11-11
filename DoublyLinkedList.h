@@ -311,6 +311,17 @@ T pop_front() {
             m_head->previous = nullptr;
         return frontValue;
     }
+void report_stats() const {
+    std::cout << "Find Node Calls: " << find_node_calls << std:: endl;
+    std::cout << "Links Followed: " << links_followed << std::endl;
+    std::cout << "Total Time (ns): " << total_time_ns << std::endl;
+    double avg_links_followed = static_cast<double>(links_followed) / find_node_calls;
+    double avg_time_ns = static_cast<double>(total_time_ns) / find_node_calls;
+
+    std::cout << "Average number of link follows for a call to find_node: " << avg_links_followed << std::endl;
+    std::cout << "Average time for a call to find_node: " << avg_time_ns << " nanoseconds" << std::endl;
+    std::cout << "End Status" << std::endl;
+}
 ~DoublyLinkedList() {
         report_stats();
         while (!is_empty())
