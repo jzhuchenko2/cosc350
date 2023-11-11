@@ -312,6 +312,7 @@ T pop_front() {
         return frontValue;
     }
 ~DoublyLinkedList() {
+        report_stats();
         while (!is_empty())
             pop_front();
     }};
