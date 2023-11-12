@@ -277,7 +277,16 @@ void insert(int position, T value){
         return remove_only_node();
     }
     else{
-        Node* find_node(position);
+        // Node* find_node(position);
+            Node *node_to_remove = m_head;
+
+            for (int i = 0; i < position; i++)
+            {
+                node_to_remove = node_to_remove->next;
+            }
+            return remove_node(node_to_remove);
+            Node *foundNode = find_node(position);
+            return foundNode->value;
     }
 }
  
