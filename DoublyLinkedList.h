@@ -21,6 +21,29 @@ class DoublyLinkedList {
         unsigned int links_followed;
         unsigned long total_time_ns;
 
+        Node *find_node_from_head(int position)
+    {
+        auto start = std::chrono::high_resolution_clock::now();
+
+        if (position < 0)
+        {
+            throw std::runtime_error("Not cool");
+        }
+        Node *current = m_head;
+        int index = 0;
+        while (current && index < position)
+        {
+            current = current->next;
+            index++;
+            links_followed++;
+        }
+
+        auto stop = std::chrono::high_resolution_clock::now();
+        total_time_ns += std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count();
+        find_node_calls++;
+        return current;
+    }
+
         Node* find_node(int position) {
         if (position < 0){
             throw std::runtime_error("Not cool");
