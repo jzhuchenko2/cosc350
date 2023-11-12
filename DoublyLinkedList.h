@@ -15,7 +15,11 @@ class DoublyLinkedList {
         };
         int m_size;
         Node* m_head;
-        Node* m_tail; 
+        Node* m_tail;
+
+        unsigned int find_node_calls;
+        unsigned int links_followed;
+        unsigned long total_time_ns;
 
         Node* find_node(int position) {
         if (position < 0){
