@@ -80,3 +80,7 @@ class TakesSomeTime {
         // initialize value to operator on
         my_value = initial_value;
     }
+   /**
+   * @brief Destructor
+   */
+   ~TakesSomeTime() { report_stats(): }
