@@ -80,7 +80,44 @@ class TakesSomeTime {
         // initialize value to operator on
         my_value = initial_value;
     }
+  
    /**
-   * @brief Destructor
-   */
-   ~TakesSomeTime() { report_stats(): }
+     * @brief Destructor
+     */
+    ~TakesSomeTime() { report_stats(); }
+
+    /**
+     * @brief this is the slow_function
+     */
+    void slow_function(int delay_nanoseconds, int num_operations) {
+        // ask the clock what time it is when this function starts
+        auto start = std::chrono::high_resolution_clock::now();
+
+        // increment the number of calls to this function
+        num_calls_to_slow_function++;
+
+        // To simulate "slowness" we will pause pause the execution of
+        // this function for num_operations times. Each pause will last
+        // the specified number of seconds
+        for (int i = 0; i < num_operations; ++i) {
+            std::chrono::nanoseconds delay_duration(delay_nanoseconds);
+            std::this_thread::sleep_for(delay_duration);
+            std::cout << "slow_function operation # " << i << " paused for "
+                      << delay_duration.count() << " nanoseconds" << std::endl;
+            
+            // update the number of operations we've performed in the slow_function
+            num_operations_in_slow_function++;
+        }
+
+        // ask the clock what time it is when this function is about to end
+        auto stop = std::chrono::high_resolution_clock::now();
+
+        // compute the duration between start and stop
+        auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+
+        // Add this duration to the overall time we've spent in this function
+        nanoseconds_in_slow_function += duration.count();
+
+        return;
+    }
+};
