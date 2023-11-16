@@ -134,3 +134,19 @@ private:
         }
     }
 };
+
+/*
+#pragma once
+
+template <typename Comparable>
+class BinarySearchTreeNode {
+public:
+    Comparable m_value;
+    BinarySearchTreeNode* m_left;
+    BinarySearchTreeNode* m_right;
+    int m_height;
+
+    BinarySearchTreeNode(const Comparable& the_value, BinarySearchTreeNode* lt = nullptr, BinarySearchTreeNode* rt = nullptr)
+        : m_value(the_value), m_left(lt), m_right(rt), m_height(0) {}
+};
+*/
