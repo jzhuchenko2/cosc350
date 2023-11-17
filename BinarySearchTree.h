@@ -1,4 +1,6 @@
-#pragme once
+/*// BinarySearchTree.h
+#pragma once
+
 #include <iostream>
 #include <stdexcept>
 
@@ -101,6 +103,7 @@ public:
             std::cout << std::endl;
         }
     }
+
 private:
     // Helper functions go here...
 
@@ -133,9 +136,8 @@ private:
             std::cout << node->value << " ";
         }
     }
-};
+};*/
 
-/*
 #pragma once
 
 template <typename Comparable>
@@ -149,4 +151,3 @@ public:
     BinarySearchTreeNode(const Comparable& the_value, BinarySearchTreeNode* lt = nullptr, BinarySearchTreeNode* rt = nullptr)
         : m_value(the_value), m_left(lt), m_right(rt), m_height(0) {}
 };
-*/
