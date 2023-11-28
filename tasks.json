@@ -12,4 +12,14 @@
                 "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "${workspaceFolder}\\*.cpp"
             ],
+          "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
 }
