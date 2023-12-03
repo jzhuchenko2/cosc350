@@ -35,3 +35,21 @@ T compute_median(const std::list<T>& a_list) {
     // Checking if the size is even or odd and returning the appropriate value
     return (size % 2 == 0) ? (sorted_values[middle - 1] + sorted_values[middle]) / static_cast<T>(2) : sorted_values[middle];
 }
+
+
+/**
+ * @brief output the values in the specified list
+ *
+ * Outputs the space separated elements of the list to the standard output
+ *
+ * @param a_list the list to output
+ */
+template <typename T>
+void outputList(const std::list<T>& a_list) {
+    std::cout << "list size: " << a_list.size() << std::endl;
+
+    for (const T& item : a_list) {
+        std::cout << item << " ";
+    }
+    std::cout << std::endl;
+}
