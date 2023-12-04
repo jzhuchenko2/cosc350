@@ -53,3 +53,25 @@ void outputList(const std::list<T>& a_list) {
     }
     std::cout << std::endl;
 }
+/**
+ * @brief read in a list of values and add them to the provided std::list
+ *
+ * Each element read is added to the back of the list.
+ * The user enters an empty line to indicate completion of the elements to add.
+ *
+ * @param a_list the list to which to add the values read
+ */
+template <typename T>
+void inputList(std::list<T>& a_list) {
+    std::string line;  // line read in from standard in
+    T a_value;         // value retrieved from line if it isn't empty
+    std::cout
+        << "Enter a list of values"
+        << "(Just press \"Return\" without entering a value when complete.)"
+        << std::endl;
+    while (std::getline(std::cin, line) && !line.empty()) {
+        std::stringstream lineStream(line);
+        lineStream >> a_value;
+        a_list.push_back(a_value);
+    }
+}
