@@ -83,3 +83,14 @@ void inputList(std::list<T>& a_list) {
  * Store the values in a list and compute and report the average (arithmetic
  * mean) and median of the elements
  */
+int main() {
+    std::list<double> scores;
+    inputList(scores);
+    outputList(scores);
+
+    double average = compute_average(scores);
+    std::cout << "average: " << average << std::endl;
+
+    double median = compute_median(scores);
+    std::cout << " median: " << median << std::endl;
+}
