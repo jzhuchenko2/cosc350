@@ -75,3 +75,11 @@ void inputList(std::list<T>& a_list) {
         a_list.push_back(a_value);
     }
 }
+
+/**
+ * @brief retrieve a list of values from the standard input and compute a
+ * couple descriptive statistics about the list
+ *
+ * Store the values in a list and compute and report the average (arithmetic
+ * mean) and median of the elements
+ */
