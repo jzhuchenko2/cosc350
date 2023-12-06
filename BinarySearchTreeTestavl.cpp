@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stdexcept>
+#include <sstream>
+#include <cassert>
+
+#include "BinarySearchTree.h"
+
+void simple_insert_test() {
+    BinarySearchTree<int> tree;
+
+    tree.insert(17);
+    tree.insert(25);
+    tree.insert(4);
+    tree.insert(88);
+    tree.insert(1);
+    tree.insert(6);
+    tree.insert(5);
+
+    std::cout << "Test: Simple Insertion\n";
+    std::cout << "Inorder traversal: ";
+    tree.inorder_print();
+
+    assert(tree.contains(5));
+    assert(tree.contains(88));
+    assert(!tree.contains(89));
+    assert(!tree.contains(-100));
+
+    std::cout << "Minimum value: " << tree.find_min() << " (Expected: 1)\n";
+    std::cout << "Maximum value: " << tree.find_max() << " (Expected: 88)\n\n";
+}
