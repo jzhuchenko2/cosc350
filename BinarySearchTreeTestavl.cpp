@@ -48,3 +48,18 @@ void LL_insert_test() {
     tree.depthorder_print();
     std::cout << "\n";
 }
+void LR_insert_test() {
+    BinarySearchTree<int> tree;
+
+    tree.insert(17);
+    tree.insert(25);
+    tree.insert(12);
+    tree.insert(10);
+    tree.insert(27);
+
+    std::cout << "Test: LR Insertion\n";
+    std::cout << "Depthorder traversal before LR insertion: ";
+    tree.depthorder_print();
+
+    tree.insert(11);
+}
