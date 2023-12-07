@@ -28,3 +28,12 @@ void simple_insert_test() {
     std::cout << "Minimum value: " << tree.find_min() << " (Expected: 1)\n";
     std::cout << "Maximum value: " << tree.find_max() << " (Expected: 88)\n\n";
 }
+void LL_insert_test() {
+    BinarySearchTree<int> tree;
+
+    tree.insert(17);
+    tree.insert(25);
+    tree.insert(12);
+    tree.insert(10);
+    tree.insert(27);
+}
