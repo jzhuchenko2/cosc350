@@ -35,5 +35,16 @@ void LL_insert_test() {
     tree.insert(25);
     tree.insert(12);
     tree.insert(10);
+    
     tree.insert(27);
+    
+    std::cout << "Test: LL Insertion\n";
+    std::cout << "Depthorder traversal before LL insertion: ";
+    tree.depthorder_print();
+
+    tree.insert(9);
+
+    std::cout << "Depthorder traversal after LL insertion: ";
+    tree.depthorder_print();
+    std::cout << "\n";
 }
